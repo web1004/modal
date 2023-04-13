@@ -1,7 +1,5 @@
 @import url(common.css);
 
-/* Google Web Font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 * {
   box-sizing: border-box;
@@ -72,7 +70,7 @@ body {
     margin-top: -100px;
   }
   100% {
-    opacity: 1;
-    margin-top: 0;
+    margin-top: 
+    opacity: 1;0;
   }
 }

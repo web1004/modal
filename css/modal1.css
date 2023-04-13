@@ -1,7 +1,5 @@
 @import url(common.css);
 
-/* Google Web Font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 * {
   box-sizing: border-box;
@@ -47,7 +45,7 @@ body {
   margin: 20px auto;
 }
 .btn-guide {
-  background-color: #616BEE;
+  background-color: #175fa2;
   color: #fff;
   font-size: 14px;
   padding: 5px;
