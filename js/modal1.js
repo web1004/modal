@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
   $(".modal-notice").click(function(){
     $(".modal").fadeIn();
   });

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
   $(".modal-notice").click(function(){
     $(".modal").fadeIn();
   });
@@ -7,5 +7,5 @@ $(document).ready(function(){
   $(".btn-close").click(function(){
     $(".modal").fadeOut();
   });
-	
+
 });

@@ -1,9 +1,9 @@
 $(document).ready(function(){
-
+	
   //각 목록을 클릭했을때.....
   $(".menu").click(function(){ 
-    $(this).next().show(); 
-    $("html").css({overflowY:"hidden"}); 
+    $(this).next().show();
+    $("html").css({"overflow-y":"hidden"}); 
     return false;
   });
 
