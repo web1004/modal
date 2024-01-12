@@ -36,7 +36,6 @@
 }
 
 /*각 목록별 나오는 모달팝업 내용 나오는 부분*/
-
 .pop_body{   /*팝업내용박스*/
 	position:relative;
 	height:100vh;	
@@ -91,7 +90,6 @@
 }
 
 /*다음이전 버튼*/
-
 .m_btn .left_btn, .m_btn .right_btn{float:left;}
 .m_btn .left_btn i,.m_btn .right_btn i{ 
 	position:relative;

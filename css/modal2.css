@@ -1,10 +1,6 @@
 @import url(common.css);
 
-
-* {
-  box-sizing: border-box;
-}
-
+* {box-sizing: border-box;}
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -12,10 +8,9 @@ body {
   line-height: 1.5em;
 }
 
-
 /* Modal with target selector */
 .modal {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
@@ -23,9 +18,7 @@ body {
   width: 100%;
   display: none;
 }
-.modal.active {
-  display: block;
-}
+.modal.active {display: block;}
 .modal-content {
   background-color: #fff;
   width: 350px;
