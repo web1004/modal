@@ -1,17 +1,27 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .item_list{ 
-	width: 1200px;
+	width: 1050px;
 	margin: auto;  
 	box-sizing:border-box;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 .item_list li{
-	float:left; 
 	width:200px; 
 	height:150px; 
-	margin-left:20px;
-	margin-bottom:20px;
-	background:orange;
+	background-color:orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .item_list li a{
 	font-size:30px;
@@ -22,83 +32,70 @@
 
 /* POPUP BOX ---------------------*/
 
-#popup{ /*검정배경*/
+.modal{ /*검정배경*/
 	display:none; 
-	position:fixed; 
+	position:absolute; 
 	left:0; 
 	top:0;
 	width:100%; 
 	height:100vh; 
 	background:rgba(0,0,0,0.7); 
 	z-index:1000;
-	overflow-y:scroll; 
-	/*auto로 하면 스크롤바의 폭때문에 콘텐츠와 버튼사이의 간격이 생김->버튼위치맞춤*/
+	overflow-x:hidden;
+	overflow-y:auto; 
+}
+
+.modalBox{
+	position: relative;
+	width: 1200px;
+	min-height: 100%;
+	margin: auto;
 }
 
 /*각 목록별 나오는 모달팝업 내용 나오는 부분*/
-.pop_body{   /*팝업내용박스*/
-	position:relative;
-	height:100vh;	
-	margin:0 auto;
-	width:1000px;
-	background:#fff;
-	z-index:10000;
-}
-.pop>li{
-	width:1000px;
+.modal-content{   /*팝업내용박스*/
+	/* border: 5px solid #000; */
 	position:absolute;
-	text-align:center;
-	background:#fff;
-	display:none;
+	width:1200px;
+	min-height: 100%;
+	background-color:#fff;
 }
-.pop>li p{
+.modal-content>li{
+	display:none;
 	text-align:center;
 	font-size:30px;
 }
 
+
 /*버튼영역*/ 
-.m_btn{
-	position:fixed;
-	left:50%;
-	top:0px;
-	margin-left:492px;
+.modal-btn{
+	/* border: 1px solid red; */
+	position:absolute;
+	left:100%;
+	top:30px;
+	/* position: fixed;
+	right: 100px;
+	top: 100px; */
 	width:80px;
 	height:150px;
 	color:#fff;
 	text-align:center;
 	overflow:hidden;
-	z-index:10000;
+	z-index:200;
 }
-.m_btn>li{
-	cursor:pointer;
-	overflow:hidden;
-	background:#e29393;
+.modal-btn i{cursor: pointer;}
+.close{
+	border-bottom:1px solid #fff;
+	padding-bottom: 10px;
 }
-.m_btn>li:hover{background:#de7575;}
-
-/*닫기버튼*/
-.m_btn .btn_close{
-	height:70px;
-	width:80px;
-	cursor:pointer;
-	border-bottom:1px solid #ecc2c2;
+.close i{font-size: 32px;}
+.lr-btn{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
 }
-.m_btn .btn_close i{  /*아이콘폰트*/
-	position:relative;
-	top:15px;
-	font-size:40px;
-}
-
-/*다음이전 버튼*/
-.m_btn .left_btn, .m_btn .right_btn{float:left;}
-.m_btn .left_btn i,.m_btn .right_btn i{ 
-	position:relative;
-	top:10px;
-	font-size:30px;	
-	width:40px;
-	height:50px;	
-}
-.m_btn .g_page{  /*Page번호*/
+.lr-btn i{font-size: 28px;}
+.g_page{ 
 	font-size:12px;
 	color:#fff;
 	width:80px;

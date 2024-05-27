@@ -1,18 +1,30 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
-#popup{ 
-	margin:0 auto; 
-	width:1000px;  
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#popup ul li{
-	float:left; 
+.items{ 
+	margin:0 auto; 
+	/* width:1000px;   */
+}
+.items .item_list{
+	display: flex;
+	gap: 10px;
+}
+.items ul li{
 	width:150px; 
 	height:150px; 
-	margin-left:20px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background:orange;
 }
-#popup ul li a{
+.items ul li a{
 	font-size:30px;
 	font-weight:bold;
 	color:#fff;
@@ -20,7 +32,7 @@
 
 
 /* POPUP BOX */
-.pop{ /*검정배경*/
+.modal{ /*검정배경*/
 	display:none; 
 	position:fixed; 
 	left:0; 
@@ -29,7 +41,13 @@
 	height:100vh; 
 	background:rgba(0,0,0,0.7); 
 	z-index:1000;  /*모든 콘텐츠보다 가장 위에 올라와야 함*/
-	overflow:auto;  /*모달창의 스크롤바를 콘텐츠의 내용길이에 따라 자동으로 나오게 함*/
+	overflow-x:hidden;
+	overflow-y:auto; 
+}
+.modal>div{
+	color: #000;
+	font-size: 32px;
+	text-align: center;
 }
 
 
@@ -60,5 +78,9 @@
 	position:fixed; 
 	right:30px; 
 	top:30px; 
+	cursor: pointer;
+}
+.close .icon{
 	color:#fff; 
+	font-size: 45px;
 }
